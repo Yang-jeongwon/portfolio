@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/index.css" rel="stylesheet">
+</head>
+<body id="main-bg">
+  <header >
+    <div id="nav">
+      <ul class="space-between">
+        <li id="logo">BULID</li>
+        <li id="menu">
+          <div class="textbox">
+            <P>NAME</P>
+            <div><a href>MY FAVORITE</a></div>
+            <div><a href>계정관리</a></div>
+            <div><a href>기록</a></div>
+            <div><a href>설정</a></div>
+            <div id="icon-box">
+              <span><a href>공유하기</a></span>
+              <span><a href>다운로드</a></span>
+              <span><a href>도움말지원</a></span>
+            </div>
+          </div>
+        </li>
+        <div id="hamburger">
+          <span></span>
+        </div>
+      </ul>
+    </div>
+  </header>
+  <mian>
+    <div class="search flex justify-content-center ">
+      <form>
+        <fieldset>
+          <select>
+            <option>who?</option>
+            <option>what?</option>
+          </select>
+          <input type="text">
+          <div id="icon-search"><img src="image/search_icon.png"></div>
+        </fieldset>
+      </form>
+    </div>
+  </mian>
+  <section id="section-1" class="margin-top-160"> 
+    <div class="title inner">Months Architect</div>
+    <div class="inner hidden">
+      <ul id="slide" >
+        <li class="slide-content">1</li>
+        <li class="slide-content">2</li>
+        <li class="slide-content">3</li>
+      </ul>
+    </div>
+  </section>
+  <section id="section-2">
+    <div class="title inner">Months Architecture</div>
+    <div id="slide-wrap">
+        <ul id="bulid-slider">
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+        </ul>
+      </div>
+  </section>
+  <footer>
+    <div id="footer-wrap">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+  </footer>
+
+
+  <script>
+
+    const slideTimer = document.querySelector('#slide');
+    const slidecontainer = document.querySelector('#slide li');
+    const items = slideTimer.children
+
+    let Timer = setInterval(function() {
+      slideTimer.insertBefore(items[0], slideTimer.lastChild);
+    }, 3000);
+    
+    // const hamburger = document.querySelector('#hamburger');
+    // const hamburgerSpan = document.querySelector('#hamburger span');
+
+    // hamburger.addEventListener("click",function(){
+
+    // }); 햄버거버튼 모양변형
+
+    window.addEventListener('load', function() {
+      const liItems = document.querySelectorAll('#bulid-slider li');
+      for(let i = 0; i < liItems.length; i++) {
+        liItems[i].style.display = 'none';
+      }
+      let slideIndex = 0;
+      let slideTimer = setInterval(function() {
+        if(slideIndex < liItems.length) {
+          for(let i = 0; i < liItems.length; i++) {
+            if(i !== slideIndex) {
+              liItems[i].style.display = "none";
+            } else {
+              liItems[i].style.display = "block";
+            }
+          }
+          slideIndex++;
+        } else {
+          slideIndex = 0;
+        }
+      }, 3000);
+    });
+
+    const menu = document.querySelector('#menu');
+    const menuitem = document.querySelector('.textbox');
+    const hamburger = document.querySelector('#hamburger');
+    const hamburgerSpan = document.querySelector('#hamburger span');
+    console.dir(hamburgerSpan);
+
+    function toggleMenu() {
+      if (menu.classList.contains("showMenu")) {
+          menu.classList.remove("showMenu");
+          hamburger.style.display = "block";
+          menu.style.display = "none";
+      } else {
+        menu.classList.add("showMenu");
+        hamburger.style.display = "block";
+        menu.style.display = "block";
+        menu.style.transition = .5 + "s";
+      }
+    }
+
+      hamburger.addEventListener("click", toggleMenu);  
+
+  </script>
+</body>
+</htmls>
