@@ -7,86 +7,79 @@
   <title>Document</title>
   <link href="css/index.css" rel="stylesheet">
 </head>
-<body id="main-bg">
-  <header >
-    <div id="nav">
-      <ul class="space-between">
-        <li id="logo">BULID</li>
-        <li id="menu">
-          <div class="textbox">
-            <P>NAME</P>
-            <div><a href>MY FAVORITE</a></div>
-            <div><a href>계정관리</a></div>
-            <div><a href>기록</a></div>
-            <div><a href>설정</a></div>
-            <div id="icon-box">
-              <span><a href>공유하기</a></span>
-              <span><a href>다운로드</a></span>
-              <span><a href>도움말지원</a></span>
-            </div>
-          </div>
-        </li>
+<body>
+  <header>
+    <nav>
+        <div id="logo"><a href="index.html">BULID</a></div>
         <div id="hamburger">
-          <span></span>
+          <div>햄버거 작대기 -1</div>
+          <div>햄버거 작대기 -2</div>
+          <div>햄버거 작대기 -3</div>
         </div>
-      </ul>
-    </div>
+        <nav id="menu">
+          <ul id="text-box">
+            <li><a href>MY FAVORITE</a></li>
+            <li><a href>계정관리</a></li>
+            <li><a href>기록</a></li>
+            <li><a href>설정</a></li>
+          </ul>
+          <ul id="icon-box">
+              <li><a href>공유하기</a></li>
+              <li><a href>다운로드</a></li>
+              <li><a href>도움말지원</a></li>
+          </ul>
+        </nav>
+    </nav>
   </header>
-  <mian>
-    <div class="search flex justify-content-center ">
-      <form>
-        <fieldset>
-          <select>
-            <option>who?</option>
-            <option>what?</option>
-          </select>
-          <input type="text">
-          <div id="icon-search"><img src="image/search_icon.png"></div>
-        </fieldset>
-      </form>
-    </div>
-  </mian>
-  <section id="section-1" class="margin-top-160"> 
-    <div class="title inner">Months Architect</div>
-    <div class="inner hidden">
-      <ul id="slide" >
-        <li class="slide-content">1</li>
-        <li class="slide-content">2</li>
-        <li class="slide-content">3</li>
-      </ul>
-    </div>
-  </section>
-  <section id="section-2">
-    <div class="title inner">Months Architecture</div>
-    <div id="slide-wrap">
-        <ul id="bulid-slider">
-          <li>1</li>
-          <li>2</li>
-          <li>3</li>
+  <div id="main-bg">
+    <mian>
+      <div class="search flex justify-content-center ">
+        <form>
+          <fieldset>
+            <select>
+              <option>who?</option>
+              <option>what?</option>
+            </select>
+            <input type="text">
+            <div id="icon-search"><img src="image/search_icon.png"></div>
+          </fieldset>
+        </form>
+      </div>
+    </mian>
+    <section id="section-1" class="margin-top-160"> 
+      <div class="title inner">Months Architect</div>
+      <div class="inner hidden">
+        <ul id="slide" >
+          <li class="slide-content"><a href="sub1.html">1</a></li>
+          <li class="slide-content"><a href="#">2</a></li>
+          <li class="slide-content"><a href="#">3</a></li>
         </ul>
       </div>
-  </section>
-  <footer>
-    <div id="footer-wrap">
-      <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-      </ul>
-    </div>
-  </footer>
+    </section>
+    <section id="section-2">
+      <div class="title inner">Months Architecture</div>
+      <div id="slide-wrap">
+          <ul id="bulid-slider">
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+          </ul>
+        </div>
+    </section>
+    <footer>
+      <div id="footer-wrap">
+        <ul>
+          <li><a href="#">hamburger</a></li>
+          <li><a href="#">home</a></li>
+          <li><a href="#">back</a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
 
 
   <script>
 
-    const slideTimer = document.querySelector('#slide');
-    const slidecontainer = document.querySelector('#slide li');
-    const items = slideTimer.children
-
-    let Timer = setInterval(function() {
-      slideTimer.insertBefore(items[0], slideTimer.lastChild);
-    }, 3000);
-    
     // const hamburger = document.querySelector('#hamburger');
     // const hamburgerSpan = document.querySelector('#hamburger span');
 
@@ -120,13 +113,16 @@
     const menuitem = document.querySelector('.textbox');
     const hamburger = document.querySelector('#hamburger');
     const hamburgerSpan = document.querySelector('#hamburger span');
-    console.dir(hamburgerSpan);
+    const mainBg = document.querySelector('#main-bg');
+    console.dir(mainBg);
 
     function toggleMenu() {
       if (menu.classList.contains("showMenu")) {
           menu.classList.remove("showMenu");
           hamburger.style.display = "block";
           menu.style.display = "none";
+          mainBg.style.backgroundColor = "#000";
+          mainBg.style.opacity = ".8";
       } else {
         menu.classList.add("showMenu");
         hamburger.style.display = "block";
@@ -135,7 +131,7 @@
       }
     }
 
-      hamburger.addEventListener("click", toggleMenu);  
+      hamburger.addEventListener("click", toggleMenu);
 
   </script>
 </body>
