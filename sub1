@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="css/index.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav>
+        <div id="logo"><a href="index.html">BULID</a></div>
+        <div id="back-icon">
+          <div><a href="#">뒤로가기</a></div>
+        </div>
+        <div id="hamburger">
+          <div>햄버거 작대기 -1</div>
+          <div>햄버거 작대기 -2</div>
+          <div>햄버거 작대기 -3</div>
+        </div>
+        <nav id="menu">
+          <ul id="textbox">
+            <li><a href>MY FAVORITE</a></li>
+            <li><a href>계정관리</a></li>
+            <li><a href>기록</a></li>
+            <li><a href>설정</a></li>
+          </ul>
+          <ul id="icon-box">
+              <li><a href>공유하기</a></li>
+              <li><a href>다운로드</a></li>
+              <li><a href>도움말지원</a></li>
+          </ul>
+        </nav>
+    </nav>
+  </header>
+  <div id="main-bg">
+    <section id="sub1-section-1">
+      <div id="subpage-title">
+        <ul>
+          <li>Months Architect</li>
+        </ul>
+        <ul id="icon">
+          <li>공유하기</li>
+          <li>favorite</li>
+        </ul>
+      </div>
+      <div id="Months-Architect-picture">
+        <div></div>
+      </div>
+      <div id="Months-Architect-text-box">
+        <div id="text-header">
+          <ul>
+            <li>KEN YANG</li>
+            <li>건축 및 생태 디자인의 거장</li>
+            <li>아이콘</li>
+          </ul>
+        <div></div>
+        </div>
+        <div id="text-main">
+          <ul>
+            <li>
+              <p><span>출생</span>: 1946년 (75세) 말레이시아</p>
+            </li>
+            <li>
+              <p><span>학력</span>: Dsingning with Nature 라는 제목으로 1995년에 출간되었으며 그의 생에 걸쳐 작품과<br>빌딩 디자인을 위한 근본적인의제가 되어왔다.</p>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <p><span>수상 경력</span>: 1989년 이후  70개 이상의 상을 수상</p>
+            </li>
+            <div>icon</div>
+            <li>Aga Khan Award for Architecture (1999)</li>
+            <li>프린스 클로스 상 (1999)</li>
+            <li>UIA( 국제 건축가연맹 ) 오귀스트 페레상(2011)</li>
+            <li>WACA(세계 중국 건축가 협회) 금메달 (2011)</li>
+            <li>지속 가능성에 대한 Holcim 지역 상(2011)</li>
+            <li>Greenseal Award(2016)</li>
+            <li>Liangsicheng Prize(2017)</li>
+            <li>PAM(Malaysia Institute of Architects) 금메달(2017)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div id="sub-slide-title" class="margin-0-auto">주요작품</div>
+      <div id="sub-slide-container" class="inner">
+        <div id="sub-slide-wrap" >
+          <ul>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
